@@ -1,0 +1,66 @@
+
+.node{
+  position: absolute;
+  transform: translate(-50%, -50%);
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out;
+}
+
+.node-a{
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom: 15px solid #29DDCC;
+    position: relative;
+    top: -10px;
+}
+
+.node-a:after {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 15px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top: 15px solid #29DDCC;
+}
+
+.node-b{
+  width: 0;
+  height: 0;
+  border: 4px solid transparent;
+  border-top: 8px solid #1C1C1C;
+  position: relative;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(30deg);
+}
+
+.node.show{
+  visibility: visible;
+  opacity: .8;
+}
+
+.node .node-line{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%) rotate(30deg);
+
+  background-color: red;
+  height: 2px;
+  aspect-ratio: 1;
+
+  transition: transform 5s linear;
+  transform-origin: left;
+}
+
+/*
+.node .node-line.connect-line {
+  transform: rotate(30deg) scaleX(100) ;
+}
+*/
