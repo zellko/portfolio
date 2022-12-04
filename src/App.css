@@ -1,4 +1,32 @@
+:root.dark{
+    --primary: #BB86FC;
+    --primary-var: #3700b3;
+    --secondary: #03dac6;
+    --background: #121212;
+    --red: #cf6679;
+    --on-background: #ffffff;
+    --on-primary: #000000;
+    --on-secondary: #000000;
+}
+
+:root.light{
+    --primary: #6200ee;
+    --primary-var: #3700b3;
+    --secondary: #03dac6;
+    --secondary-var: #018786;
+    --background: #ffffff;
+    --red: #b00020;
+    --on-background: #121212;
+    --on-primary: #ffffff;
+    --on-secondary: #000000;
+}
+
 .App {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background);
+    color: var(--on-background);
+    font-size: 1.2rem;
 }
 
 /* Mobile */
