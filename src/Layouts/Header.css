@@ -1,0 +1,42 @@
+header{
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+nav{
+    display: flex;
+    border: 1px solid var(--on-background);
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+}
+
+header a{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    padding: 8px 16px;
+    color: var(--on-background);
+    background-color: var(--background);
+}
+
+.external-link{
+    display: flex;
+    border: 1px solid var(--on-background);
+    margin-left: auto;
+}
+
+header .active{
+    background-color: var(--secondary);
+    color: var(--on-secondary);
+}
+
+header a:hover{
+    background-color: rgba(3, 218, 197, 0.4);
+}
