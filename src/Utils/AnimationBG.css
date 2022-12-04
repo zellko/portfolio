@@ -1,18 +1,6 @@
-body, #root{
-    min-height: 100vh;
-    display: flex;
-}
-
-#root, .App{
-    flex: 1;
-}
-
 .animation-bg-container{
     box-sizing: border-box;
     position: relative;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
 
     height: 100%;
     /* border: 1px solid #29DDCC;
