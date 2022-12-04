@@ -9,13 +9,6 @@ function showAnimation() {
   animationContainer.classList.add('show');
 }
 
-function showNode() {
-  counter += 1;
-  if (counter > 5) return;
-  const nodeComponent = document.querySelector(`.node.node-${counter}`);
-  nodeComponent.classList.add('show');
-}
-
 function getRandomPostion(nodeNumber) {
   let minRandXValue;
   let maxRandXValue;
@@ -151,23 +144,58 @@ function calculateDistance(nodesPositions) {
   return distance;
 }
 
-function connectNode(nodeNumber) {
-  console.log(nodeNumber);
+function connectNode(nodeNumberA, nodeNumberB, line) {
+  const nodeComponentA = document.querySelector(`.node-${nodeNumberA}`);
+  const nodeComponentB = document.querySelector(`.node-${nodeNumberB}`);
+
+  if (nodeComponentA === null || nodeComponentB === null) return;
+
+  const nodesPositions = getNodesPosition(nodeNumberA, nodeNumberB);
+  const distance = calculateDistance(nodesPositions);
+  const angle = calculateAngle(nodesPositions);
+
+  console.log(`Distance: ${distance} // Angle: ${angle}`);
+  const nodeLineA = document.querySelector(`.node-${nodeNumberA} .node-line.${line}`);
+  nodeLineA.style.cssText += `transform: translate(-50%, -50%) rotate(${angle}deg) scaleX(0);`;
+
+  nodeLineA.addEventListener('transitionend', () => {
+    nodeLineA.style.cssText += `transform: translate(-50%, -50%) rotate(${angle}deg) scaleX(${distance / 2 - 2});`;
+  });
+}
+
+function showNode() {
+  counter += 1;
+  if (counter > 5) return;
+  const nodeComponent = document.querySelector(`.node.node-${counter}`);
+  nodeComponent.classList.add('show');
+
+  switch (counter) {
+    case 2:
+      connectNode(1, 2, 'a');
+      break;
+    case 3:
+      connectNode(2, 3, 'a');
+      connectNode(3, 1, 'a');
+      break;
+    case 4:
+      connectNode(2, 4, 'b');
+      connectNode(4, 1, 'a');
+      break;
+    case 5:
+      connectNode(3, 5, 'b');
+      connectNode(4, 5, 'b');
+      connectNode(5, 1, 'a');
+      break;
+    default:
+      break;
+  }
 }
 
 function AnimationBG() {
   useEffect(() => {
     const delay = setTimeout(showAnimation, 500);
-    const interval = setInterval(showNode, 1000);
+    const interval = setInterval(showNode, 4000);
 
-    // console.log(calculateDistance(1, 2));
-    // console.log(calculateDistance(1, 5));
-
-    /* TEST */
-    const testPosition = getNodesPosition(1, 4);
-    console.log(testPosition);
-    calculateDistance(testPosition);
-    calculateAngle(testPosition);
     return () => {
       clearTimeout(delay);
       clearInterval(interval);
@@ -201,5 +229,5 @@ function AnimationBG() {
 }
 
 export {
-  AnimationBG, getRandomPostion, calculateAngle, calculateDistance,
+  AnimationBG, getRandomPostion, getNodesPosition, calculateAngle, calculateDistance, connectNode,
 };
