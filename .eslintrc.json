@@ -17,6 +17,7 @@
         "react"
     ],
     "rules": {
-        "react/jsx-filename-extension": "warn"
+        "react/jsx-filename-extension": "warn",
+        "react/prop-types" : "off"
     }
 }
