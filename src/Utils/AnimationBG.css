@@ -1,14 +1,18 @@
 .animation-bg-container{
     box-sizing: border-box;
-    position: relative;
+    position: absolute;
 
-    height: 100%;
-    /* border: 1px solid #29DDCC;
-    border-radius: 9999px; */
+    height: calc(100% - 41px);
+    width: 100%;
+    bottom: 0;
 
     opacity: 0;
     visibility: hidden;
     transition: opacity 1s ease-in-out;
+
+    overflow: hidden;
+    /* border: 1px solid #29DDCC;
+    border-radius: 9999px; */
 }
 
 .animation-bg-container.show{
