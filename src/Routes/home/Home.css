@@ -53,7 +53,7 @@
 }
 
 /* Mobile */
-@media (max-width: 600px){
+@media (max-width: 690px){
     .home button{
         padding: 0;
         border: 0;

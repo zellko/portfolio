@@ -1,3 +1,9 @@
+:root{
+    --frame-margin:4vh;
+    --frame-margin-mobile: 1vh;
+    --mobile-width-threshold: 690px;
+}
+
 :root.dark{
     --primary: #BB86FC;
     --primary-var: #3700b3;
@@ -7,6 +13,7 @@
     --on-background: #ffffff;
     --on-primary: #000000;
     --on-secondary: #000000;
+    background-color: var(--background);
 }
 
 :root.light{
@@ -19,6 +26,7 @@
     --on-background: #121212;
     --on-primary: #ffffff;
     --on-secondary: #000000;
+    background-color: var(--background);
 }
 
 .App {
@@ -29,6 +37,8 @@
     color: var(--on-background);
     font-size: 1.2rem;
     overflow: hidden;
+    margin: var(--frame-margin);
+    border: 1px solid var(--on-background);
 }
 
 body{
@@ -44,7 +54,10 @@ body{
 }
 
 /* Mobile */
-@media (max-width: 600px){
+@media (max-width: 690px){
+    .App {
+        margin: var(--frame-margin-mobile);
+    }
 }
 
 /* Tablet */

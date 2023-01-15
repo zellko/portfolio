@@ -47,7 +47,7 @@ header a:hover{
 }
 
 /* Mobile */
-@media (max-width: 600px){
+@media (max-width: 690px){
 
     header,
     nav ul,
@@ -64,13 +64,14 @@ header a:hover{
 
     header{
         position: absolute;
+        top: var(--frame-margin-mobile);
+        left: var(--frame-margin-mobile);
         align-items: flex-start;
-        height: 100vh;
-        width: 100%;
+        height: calc(100% - (var(--frame-margin-mobile) * 2));
+        width: calc(100% - (var(--frame-margin-mobile) * 2));
         background-color: var(--background);
         visibility: hidden;
         border: 1px solid var(--on-background);
-
         box-sizing: border-box;
     }
 

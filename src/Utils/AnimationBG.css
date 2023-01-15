@@ -2,9 +2,9 @@
     box-sizing: border-box;
     position: absolute;
 
-    height: calc(100% - 41px);
-    width: 100%;
-    bottom: 0;
+    height: calc(100% - 41px - (var(--frame-margin) * 2));
+    width: calc(100% - (var(--frame-margin) * 2));
+    bottom: var(--frame-margin);
 
     opacity: 0;
     visibility: hidden;
@@ -18,4 +18,14 @@
 .animation-bg-container.show{
     visibility: visible;
     opacity: .2;
+}
+
+
+/* Mobile */
+@media (max-width: 690px){
+    .animation-bg-container{
+        height: calc(100% - 48px - var(--frame-margin-mobile));
+        width: calc(100% - (var(--frame-margin-mobile) * 2));
+        bottom: var(--frame-margin-mobile);
+    }
 }
