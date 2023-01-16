@@ -68,7 +68,7 @@ function Header() {
               <Link to="/" className={isActive('/')}>Home</Link>
             </li>
             <li>
-              <Link to="/project" className={isActive('/project')}>Project</Link>
+              <Link to="/projects" className={isActive('/projects')}>Projects</Link>
             </li>
             <li>
               <Link to="/about" className={isActive('/about')}>About</Link>

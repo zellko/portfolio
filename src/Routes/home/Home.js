@@ -44,7 +44,7 @@ function Home() {
       </h1>
       <h2>I am a full stack Web Developer.</h2>
       <button type="button">
-        <Link to="/project">See My Work</Link>
+        <Link to="/projects">See My Work</Link>
       </button>
     </main>
   );
