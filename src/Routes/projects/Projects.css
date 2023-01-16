@@ -3,4 +3,18 @@
     display: flex;
     flex-direction: column;
     flex: 1;
+    gap: 16px;
 }
+
+.projects > *{
+    margin: 0 0 0 5%;
+}
+
+.projects h1{
+    font-size: calc(2rem + 1vw);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1.2;
+    padding: 5% 0 2% 0;
+ }
+ 
