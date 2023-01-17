@@ -12,7 +12,7 @@ function Projects() {
         Selected Projects:
       </h1>
       {projectsData.map((pjt) => (
-        <PjtCard data={pjt} />
+        <PjtCard data={pjt} key={pjt.projectLinkName} />
       ))}
     </main>
   );
