@@ -6,6 +6,7 @@ import { AnimationBG } from './Utils/AnimationBG';
 import Header from './Layouts/Header';
 import Home from './Routes/home/Home';
 import Projects from './Routes/projects/Projects';
+import ProjectsFull from './Routes/projectsFull/ProjectsFull';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/projects/:name" />
+        <Route path="/projects/:name" element={<ProjectsFull />} />
         <Route path="/about" />
         <Route path="/contact" />
       </Routes>
