@@ -1,0 +1,41 @@
+.projects-full{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    margin-top: 10vh;
+    width: 80%;
+}
+
+/* Small screen */
+@media (max-width: 1000px){
+    .projects-full{
+
+    }
+}
+
+/* Mobile */
+@media (max-width: 690px){
+    .projects-full{
+
+    }
+
+    .projects-full .card-text-container{
+
+    }
+
+    .projects-full .card-text-container h1{
+
+    }
+
+    .projects-full .card-text-container h2{
+
+    }
+
+    .projects-full .card-img-container{
+
+    }
+
+    .projects-full .card-img-container > img{
+
+    }
+}
