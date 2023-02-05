@@ -75,7 +75,7 @@
         transform: scale(1);
     }
 
-    .card-text-container{
+    .pjtCard .card-text-container{
         position: absolute;
         top: 16px;
         left: 8px;
@@ -90,11 +90,11 @@
         display: none;
     }
 
-    .card-img-container{
+    .pjtCard .card-img-container{
         width: 98%;
     }
 
-    .card-img-container > img{
+    .pjtCard .card-img-container > img{
         width: 100%;
     }
 }
